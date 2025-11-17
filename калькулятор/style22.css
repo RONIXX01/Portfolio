@@ -1,0 +1,65 @@
+#result{
+	font-size: 40pt;
+	text-align: right;
+}
+#all{
+	height: 80px;
+	width: 100px;
+	font-size: 40pt;
+	border: 1px solid black;
+	border-spacing: 5px;
+	border-radius: 15px;
+	background-color:  lightblue;
+}
+#ноль{
+	height: 80px;
+	width: 203px;
+	font-size: 40pt;
+	border: 1px solid black;
+	border-spacing: 5px;
+	border-radius: 15px;
+	background-color:  lightblue;
+
+}
+input{
+	width: 400px;
+}
+#равно{
+	height: 80px;
+	width: 300px;
+	font-size: 40pt;
+	border: 1px solid black;
+	border-spacing: 5px;
+	border-radius: 15px;
+	background-color:  lightblue;
+}
+#all:hover{
+	height: 80px;
+	width: 100px;
+	font-size: 40pt;
+	border: 1px solid black;
+	border-spacing: 5px;
+	border-radius: 15px;
+	background-color: red;
+}
+#ноль:hover{
+	height: 80px;
+	width: 203px;
+	font-size: 40pt;
+	border: 1px solid black;
+	border-spacing: 5px;
+	border-radius: 15px;
+	background-color: red;
+}
+#равно:hover{
+	height: 80px;
+	width: 300px;
+	font-size: 40pt;
+	border: 1px solid black;
+	border-spacing: 5px;
+	border-radius: 15px;
+	background-color: red;
+}
+
+
+
