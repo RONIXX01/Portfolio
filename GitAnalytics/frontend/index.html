@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Генератор отчётов</title>
+</head>
+<body>
+    <h1>Генерация отчёта проекта</h1>
+
+    <button id="generateBtn">Сгенерировать отчёт</button>
+
+    <p id="status"></p>
+
+    <script>
+        const button = document.getElementById("generateBtn");
+        const status = document.getElementById("status");
+
+        button.onclick = async () => {
+            status.textContent = "Генерация отчёта... подожди...";
+
+            try {
+                const response = await fetch("http://127.0.0.1:5000/generate-report");
+
+                if (!response.ok) {
+                    status.textContent = "Ошибка сервера: " + response.status;
+                    return;
+                }
+
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = "report.pdf";
+                a.click();
+
+                status.textContent = "Готово!";
+
+            } catch (e) {
+                status.textContent = "Ошибка подключения к серверу.";
+            }
+        };
+    </script>
+</body>
+</html>
